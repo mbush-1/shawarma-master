@@ -12,6 +12,58 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+
+/* CUSTOM MODIFICATIONS BEGIN */
+html {
+  background-color:rgb(30, 37, 48)
+}
+
+/* Might ditch for a logo image */
+.brand-text {
+  font-family: Anton;
+  padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: var(--bs-navbar-brand-padding-y);
+  margin-right: none;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.brand-text:hover {
+  filter: brightness(0.7);
+}
+
+.checkout-button {
+  background-color: rgb(232, 232, 25);
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: white;
+  font-family: Anton;
+  /* font-weight: ; */
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+  transition: all 0.2s;
+}
+.checkout-button:hover {
+  filter: brightness(0.7);
+}
+
+.small-nav-icon {
+  width: 3.55rem;
+  transition: all 0.2s;
+}
+.small-nav-icons:hover {
+  filter: brightness(0.7);
+}
+
+/* CUSTOM MODIFICATIONS END */
+
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 :root,
 [data-bs-theme=light] {
@@ -192,12 +244,7 @@
 
 
 
-/* CUSTOM MODIFICATIONS BEGIN */
-html {
-  background-color:#1e2530
-}
 
-/* CUSTOM MODIFICATIONS END */
 
 *,
 *::before,
@@ -3971,6 +4018,7 @@ textarea.form-control-lg {
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 1rem;
+  margin-bottom: 2rem;
   --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
   --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);

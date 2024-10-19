@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- META STANDARDS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- TITLE & FAVICON -->
+  <title>Home | Shawarma Master</title>
+  <link rel="icon" href="resources/shawarma-master-logo.png">
 
-    <!-- TITLE & FAVICON -->
-    <title>Shawarma Master | Home</title>
-    <link rel="icon" href="resources/shawarma-master-logo.png">
+  <!-- PAGE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-    <!-- PAGE FONTS -->
-    
-
-    <!-- BOOTSTRAP TEMPLATE -->
-    <link rel="stylesheet" href="resources/bootstrap-flaty.css">
+  <!-- BOOTSTRAP TEMPLATE -->
+  <link rel="stylesheet" href="resources/bootstrap-flaty.css">
 
 </head>
 
-
-
 <body>
-    <nav class="navbar navbar-expand-md bg-primary pt-4 pb-4" data-bs-theme="dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">SHAWARMA MASTER</a>
-        
-            <!-- add CONTACT US, FOODS DROP DOWN -->
-            <button class="btn btn-warning">
-                CHECKOUT
-            </button>
-          </div>
-        </div>
-      </nav>
+
+  <!-- NAVIGAITON BAR -->
+  <nav class="navbar navbar-expand-md bg-primary fixed-top py-4" data-bs-theme="dark">
+    <div class="container">
+
+      <!-- Only seen in medium or bigger screens -->
+      <div class="d-none d-md-flex align-items-center" style="padding: 0; margin: 0; width: 100%;">
+        <a class="brand-text" href="#">SHAWARMA <span style="color: rgb(232, 232, 25);">MASTER</span></a>
+        <a class="brand-text" href="#" style="margin-left: auto; margin-right: 1.5rem;">CONTACT</a>
+        <a class="brand-text" href="#" style="color: #e8e819;">CHECKOUT</a>
+      </div>
+
+      <!-- Only seen in smaller screens: will have icons instead -->
+      <div class="d-flex d-md-none align-items-center" style="padding: 0; margin: 0; width: 100%;">
+        <a class="brand-text ms-3" href="#">SHAWARMA <span style="color: rgb(232, 232, 25);">MASTER</span></a>
+        <a href="#" class="ms-auto me-2 small-nav-icon"><img class="img img-fluid" src="resources/phone.png"></a>
+        <a class="me-3" href="#"><img class="img img-fluid small-nav-icon" src="resources/shop.png"></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TITLE / LANDING SECTION -->
+  <section>
+    <div class="container">
+    </div>
+  </section>
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- PLAIN TEXT -->
+  <!-- <p class="">Hello World!</p> -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
