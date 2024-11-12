@@ -12,11 +12,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-
 /* CUSTOM MODIFICATIONS BEGIN */
 html {
   background-color:rgb(30, 37, 48)
 }
+
+
 
 /* Might ditch for a logo image */
 .brand-text {
@@ -35,7 +36,7 @@ html {
 }
 
 .checkout-button {
-  background-color: rgb(232, 232, 25);
+  background-color: var(--secondary-yellow);
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   padding-left: 1.5rem;
@@ -60,13 +61,104 @@ html {
 .small-nav-icon:hover {
   filter: brightness(0.7);
 }
+/* Title container for positioning */
+.title-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center; /* Center text by default */
+  color: #ffffff;
+}
+
+/* Title style */
+.landing-title {
+  letter-spacing: 0.1rem;
+  font-family: Anton;
+  cursor: default;
+  font-size: 3rem;
+}
+
+/* Subtitle style */
+.landing-subtitle {
+  color: var(--secondary-yellow);
+  font-family: Rubik Dirt;
+  letter-spacing: 0.075rem;
+  font-size: 2.4rem;
+  cursor: default;
+}
+
 
 /* CUSTOM MODIFICATIONS END */
+
+/* Mobile screen size */
+@media (min-width: 575.98px) {
+  .landing-title {
+    font-size: 4rem; /* Smaller title size on mobile */
+  }
+
+  .landing-subtitle {
+    font-size: 1.8rem; /* Smaller subtitle size on mobile */
+  }
+
+
+}
+
+/* For small tablets */
+@media (min-width: 767.98px) {
+  .landing-title {
+    font-size: 6rem; /* Increase title size slightly */
+  }
+
+  .landing-subtitle {
+    font-size: 2.6rem; /* Slightly larger subtitle size */
+  }
+}
+
+/* For tablets */
+@media (min-width: 991.98px) {
+  .landing-title {
+    font-size: 6rem; /* Larger title on tablets */
+  }
+
+  .landing-subtitle {
+    font-size: 2.6rem; /* Larger subtitle */
+  }
+
+
+
+/* For small desktops */
+@media (min-width: 1199.98px) {
+  .landing-title {
+    font-size: 7rem; /* Normal size title for small desktops */
+  }
+
+  .landing-subtitle {
+    font-size: 3rem; /* Normal subtitle size */
+  }
+
+  .title-container {
+    right: 10%;
+  }
+}
+}
+
+/* For larger desktops */
+@media (min-width: 1399.98px) {
+  .landing-title {
+    font-size: 8rem; /* Larger title for large screens */
+  }
+
+  .landing-subtitle {
+    font-size: 3.5rem; /* Larger subtitle for larger screens */
+  }
+}
 
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 :root,
 [data-bs-theme=light] {
+  --secondary-yellow: #e8e819;
   --bs-blue: #2c3e50;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -260,6 +352,7 @@ html {
 
 body {
   margin: 0;
+  margin-top: 6rem;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -2117,36 +2210,7 @@ progress {
   -webkit-overflow-scrolling: touch;
 }
 
-@media (max-width: 575.98px) {
-  .table-responsive-sm {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-@media (max-width: 767.98px) {
-  .table-responsive-md {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-@media (max-width: 991.98px) {
-  .table-responsive-lg {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-@media (max-width: 1199.98px) {
-  .table-responsive-xl {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-@media (max-width: 1399.98px) {
-  .table-responsive-xxl {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
+
 .form-label {
   margin-bottom: 0.5rem;
 }
