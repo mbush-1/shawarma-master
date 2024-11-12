@@ -57,7 +57,7 @@ html {
   width: 3.55rem;
   transition: all 0.2s;
 }
-.small-nav-icons:hover {
+.small-nav-icon:hover {
   filter: brightness(0.7);
 }
 
