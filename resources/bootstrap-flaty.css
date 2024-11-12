@@ -14,10 +14,8 @@
 
 /* CUSTOM MODIFICATIONS BEGIN */
 html {
-  background-color:rgb(30, 37, 48)
+  background-color: rgb(30, 37, 48)
 }
-
-
 
 /* Might ditch for a logo image */
 .brand-text {
@@ -25,7 +23,7 @@ html {
   padding-top: var(--bs-navbar-brand-padding-y);
   padding-bottom: var(--bs-navbar-brand-padding-y);
   margin-right: none;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: white;
   text-decoration: none;
   white-space: nowrap;
@@ -89,9 +87,48 @@ html {
 }
 
 
+.menu-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;  /* Ensures the wrapper takes up full width of the container */
+  position: relative;  /* So we can control the lines' position absolutely */
+}
+
+.left-line, .right-line {
+  position: absolute;  /* Position lines relative to the wrapper */
+  top: 50%;  /* Vertically center the lines */
+  height: 3px;  /* Thickness of the lines */
+  background-color: #e8e819;  /* Line color */
+  width: 24%;
+}
+
+.left-line {
+  left: 0;  /* Align the left line to the start of the container */
+}
+
+.right-line {
+  right: 0;  /* Align the right line to the end of the container */
+}
+
+.menu-title {
+  color: white;
+  letter-spacing: 0.25rem;
+  font-family: Anton, sans-serif; /* Added a fallback font */
+  cursor: default;
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px; /* Adds space on either side of the title so it doesn't overlap with the lines */
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+
 /* CUSTOM MODIFICATIONS END */
 
 /* Mobile screen size */
+
 @media (min-width: 575.98px) {
   .landing-title {
     font-size: 4rem; /* Smaller title size on mobile */
@@ -101,6 +138,9 @@ html {
     font-size: 1.8rem; /* Smaller subtitle size on mobile */
   }
 
+  .left-line, .right-line {
+    width: 30%;
+  }
 
 }
 
@@ -113,6 +153,12 @@ html {
   .landing-subtitle {
     font-size: 2.6rem; /* Slightly larger subtitle size */
   }
+
+
+  .left-line, .right-line {
+    width: 35%;
+  }
+
 }
 
 /* For tablets */
@@ -125,7 +171,16 @@ html {
     font-size: 2.6rem; /* Larger subtitle */
   }
 
+  .brand-text {
+    font-size: 2rem;
+  }
 
+  
+  .left-line, .right-line {
+    width: 38%;
+  }
+
+}
 
 /* For small desktops */
 @media (min-width: 1199.98px) {
@@ -140,8 +195,12 @@ html {
   .title-container {
     right: 10%;
   }
+
+  .left-line, .right-line {
+    width: 40%;
+  }
 }
-}
+
 
 /* For larger desktops */
 @media (min-width: 1399.98px) {
@@ -158,6 +217,7 @@ html {
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 :root,
 [data-bs-theme=light] {
+  --primary-background: rgb(30, 37, 48);
   --secondary-yellow: #e8e819;
   --bs-blue: #2c3e50;
   --bs-indigo: #6610f2;
@@ -8935,7 +8995,7 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  background-color: var(--primary-background) !important
 }
 
 .bg-secondary {
